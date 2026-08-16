@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +28,9 @@
   <meta property="og:url"
         content="https://ganeshkumarakkina-a11y.github.io/">
 
-  <style>
 
-    /* =========================================================
-       RESET
-    ========================================================= */
+
+  <style>
 
     * {
       margin: 0;
@@ -76,31 +73,18 @@
       color: #ffffff;
     }
 
-
-    /* =========================================================
-       VARIABLES
-    ========================================================= */
-
     :root {
       --green: #22b573;
       --green-light: #4ee09a;
       --green-dark: #0d6b43;
-
       --dark: #07140e;
       --dark-2: #0b1b13;
       --dark-3: #10271b;
-
       --white: #f4faf7;
       --muted: #9aada3;
       --line: rgba(255,255,255,0.09);
-
       --container: 1240px;
     }
-
-
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
 
     .container {
       width: min(var(--container), calc(100% - 48px));
@@ -111,11 +95,9 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-
       color: var(--green-light);
       font-size: 12px;
       font-weight: 800;
-
       letter-spacing: 2px;
       text-transform: uppercase;
     }
@@ -130,7 +112,6 @@
     .section-heading {
       margin-top: 18px;
       max-width: 850px;
-
       font-size: clamp(34px, 5vw, 64px);
       line-height: 1.05;
       letter-spacing: -2px;
@@ -139,22 +120,18 @@
     .section-description {
       max-width: 700px;
       margin-top: 20px;
-
       color: var(--muted);
       font-size: 17px;
     }
 
 
-    /* =========================================================
-       HEADER
-    ========================================================= */
+    /* HEADER */
 
     .header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-
       z-index: 1000;
 
       background: rgba(7,20,14,0.72);
@@ -192,9 +169,11 @@
       border-radius: 11px;
 
       background:
-        linear-gradient(145deg,
-        rgba(34,181,115,0.25),
-        rgba(34,181,115,0.04));
+        linear-gradient(
+          145deg,
+          rgba(34,181,115,0.25),
+          rgba(34,181,115,0.04)
+        );
 
       color: var(--green-light);
       font-size: 12px;
@@ -227,7 +206,6 @@
       color: #b9c9c1;
       font-size: 13px;
       font-weight: 600;
-
       transition: color .25s ease;
     }
 
@@ -237,22 +215,17 @@
 
     .nav-cta {
       padding: 11px 18px;
-
       background: var(--green);
       color: white !important;
-
       border-radius: 8px;
     }
 
     .nav-cta:hover {
       background: #2ac983;
-      color: white !important;
     }
 
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
 
     .hero {
       min-height: 850px;
@@ -280,7 +253,6 @@
     .hero-grid {
       position: absolute;
       inset: 0;
-
       opacity: .22;
 
       background-image:
@@ -296,13 +268,14 @@
 
       background-size: 70px 70px;
 
-      mask-image: linear-gradient(
-        to right,
-        transparent,
-        black 30%,
-        black 70%,
-        transparent
-      );
+      mask-image:
+        linear-gradient(
+          to right,
+          transparent,
+          black 30%,
+          black 70%,
+          transparent
+        );
     }
 
     .hero-orbit {
@@ -487,7 +460,6 @@
 
     .hero-mini strong {
       display: block;
-
       color: white;
       font-size: 20px;
     }
@@ -501,14 +473,11 @@
     }
 
 
-    /* =========================================================
-       STATS
-    ========================================================= */
+    /* STATS */
 
     .stats-wrap {
       position: relative;
       z-index: 10;
-
       margin-top: -85px;
     }
 
@@ -564,9 +533,7 @@
     }
 
 
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    /* ABOUT */
 
     .about {
       padding: 140px 0;
@@ -726,9 +693,7 @@
     }
 
 
-    /* =========================================================
-       SERVICES
-    ========================================================= */
+    /* SERVICES */
 
     .services {
       padding: 140px 0;
@@ -829,9 +794,7 @@
     }
 
 
-    /* =========================================================
-       FEATURE SECTION
-    ========================================================= */
+    /* INDUSTRIAL */
 
     .industrial {
       padding: 140px 0;
@@ -903,9 +866,7 @@
     }
 
 
-    /* =========================================================
-       CLIENTS
-    ========================================================= */
+    /* CLIENTS */
 
     .clients {
       padding: 140px 0;
@@ -986,9 +947,7 @@
     }
 
 
-    /* =========================================================
-       PROCESS
-    ========================================================= */
+    /* PROCESS */
 
     .process {
       padding: 140px 0;
@@ -1042,9 +1001,7 @@
     }
 
 
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact {
       padding: 140px 0;
@@ -1216,14 +1173,28 @@
       font-weight: 700;
     }
 
-    .contact-button {
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
       margin-top: 28px;
     }
 
+    .whatsapp-button {
+      background: #25D366 !important;
+      color: white !important;
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+      box-shadow:
+        0 12px 28px rgba(37,211,102,.20);
+    }
+
+    .whatsapp-button:hover {
+      background: #20bd5a !important;
+    }
+
+
+    /* FOOTER */
 
     .footer {
       padding: 35px 0;
@@ -1257,9 +1228,7 @@
     }
 
 
-    /* =========================================================
-       MOBILE
-    ========================================================= */
+    /* MOBILE */
 
     @media (max-width: 1000px) {
 
@@ -1287,10 +1256,6 @@
 
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .industrial-grid {
-        gap: 45px;
       }
 
     }
@@ -1333,7 +1298,6 @@
 
       .hero-bottom {
         margin-top: 60px;
-
         gap: 25px;
       }
 
@@ -1396,6 +1360,14 @@
         padding: 30px;
       }
 
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .contact-buttons .button {
+        width: 100%;
+      }
+
       .footer-inner {
         flex-direction: column;
         text-align: center;
@@ -1410,36 +1382,28 @@
   </style>
 
 
-  <!-- =========================================================
-       STRUCTURED DATA
-  ========================================================= -->
+  <!-- GOOGLE / SEARCH STRUCTURED DATA -->
 
   <script type="application/ld+json">
 
   {
     "@context": "https://schema.org",
+
     "@type": "LocalBusiness",
 
     "name": "Ganesh Engineering Works",
 
-    "url":
-      "https://ganeshkumarakkina-a11y.github.io/",
+    "url": "https://ganeshkumarakkina-a11y.github.io/",
 
-    "telephone":
-      "0883-4051478",
+    "telephone": "+91-9393999635",
 
     "address": {
       "@type": "PostalAddress",
-      "streetAddress":
-        "26-15-4, Kambalapeta",
-      "addressLocality":
-        "Rajahmundry",
-      "addressRegion":
-        "Andhra Pradesh",
-      "postalCode":
-        "533103",
-      "addressCountry":
-        "IN"
+      "streetAddress": "26-15-4, Kambalapeta",
+      "addressLocality": "Rajahmundry",
+      "addressRegion": "Andhra Pradesh",
+      "postalCode": "533103",
+      "addressCountry": "IN"
     },
 
     "description":
@@ -1455,9 +1419,7 @@
 <body>
 
 
-  <!-- =========================================================
-       HEADER
-  ========================================================= -->
+  <!-- HEADER -->
 
   <header class="header">
 
@@ -1470,6 +1432,7 @@
         </div>
 
         <div>
+
           <div class="brand-name">
             GANESH ENGINEERING WORKS
           </div>
@@ -1477,6 +1440,7 @@
           <div class="brand-sub">
             Industrial Engineering & Services
           </div>
+
         </div>
 
       </a>
@@ -1484,13 +1448,21 @@
 
       <nav class="nav-links">
 
-        <a href="#about">About</a>
+        <a href="#about">
+          About
+        </a>
 
-        <a href="#services">Services</a>
+        <a href="#services">
+          Services
+        </a>
 
-        <a href="#clients">Experience</a>
+        <a href="#clients">
+          Experience
+        </a>
 
-        <a href="#process">Process</a>
+        <a href="#process">
+          Process
+        </a>
 
         <a href="#contact" class="nav-cta">
           Contact Us
@@ -1504,9 +1476,7 @@
 
 
 
-  <!-- =========================================================
-       HERO
-  ========================================================= -->
+  <!-- HERO -->
 
   <section class="hero" id="home">
 
@@ -1544,20 +1514,20 @@
 
       <div class="hero-actions">
 
-        <a
-          href="#services"
-          class="button button-primary"
-        >
+        <a href="#services"
+           class="button button-primary">
+
           Explore Services
           →
+
         </a>
 
 
-        <a
-          href="#contact"
-          class="button button-secondary"
-        >
+        <a href="#contact"
+           class="button button-secondary">
+
           Request a Quotation
+
         </a>
 
       </div>
@@ -1567,7 +1537,9 @@
 
         <div class="hero-mini">
 
-          <strong>450+</strong>
+          <strong>
+            450+
+          </strong>
 
           <span>
             Jobs Completed
@@ -1578,7 +1550,9 @@
 
         <div class="hero-mini">
 
-          <strong>400+</strong>
+          <strong>
+            400+
+          </strong>
 
           <span>
             Shutdown Manpower
@@ -1589,7 +1563,9 @@
 
         <div class="hero-mini">
 
-          <strong>100+</strong>
+          <strong>
+            100+
+          </strong>
 
           <span>
             Project Manpower
@@ -1605,9 +1581,7 @@
 
 
 
-  <!-- =========================================================
-       STATS
-  ========================================================= -->
+  <!-- STATS -->
 
   <div class="container stats-wrap">
 
@@ -1669,9 +1643,7 @@
 
 
 
-  <!-- =========================================================
-       ABOUT
-  ========================================================= -->
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
@@ -1814,14 +1786,11 @@
 
 
 
-  <!-- =========================================================
-       SERVICES
-  ========================================================= -->
+  <!-- SERVICES -->
 
   <section class="services" id="services">
 
     <div class="container">
-
 
       <div class="eyebrow">
         Our Services
@@ -1871,7 +1840,6 @@
         </article>
 
 
-
         <article class="service">
 
           <div class="service-number">
@@ -1892,7 +1860,6 @@
           </p>
 
         </article>
-
 
 
         <article class="service">
@@ -1917,7 +1884,6 @@
         </article>
 
 
-
         <article class="service">
 
           <div class="service-number">
@@ -1938,7 +1904,6 @@
           </p>
 
         </article>
-
 
 
         <article class="service">
@@ -1963,7 +1928,6 @@
         </article>
 
 
-
         <article class="service">
 
           <div class="service-number">
@@ -1984,7 +1948,6 @@
           </p>
 
         </article>
-
 
 
         <article class="service">
@@ -2009,7 +1972,6 @@
         </article>
 
 
-
         <article class="service">
 
           <div class="service-number">
@@ -2030,7 +1992,6 @@
           </p>
 
         </article>
-
 
 
         <article class="service">
@@ -2063,9 +2024,7 @@
 
 
 
-  <!-- =========================================================
-       INDUSTRIAL
-  ========================================================= -->
+  <!-- INDUSTRIAL -->
 
   <section class="industrial">
 
@@ -2200,9 +2159,7 @@
 
 
 
-  <!-- =========================================================
-       CLIENTS / EXPERIENCE
-  ========================================================= -->
+  <!-- CLIENTS -->
 
   <section class="clients" id="clients">
 
@@ -2238,8 +2195,6 @@
       <div class="client-grid">
 
 
-        <!-- APPM -->
-
         <div class="client-card">
 
           <img
@@ -2258,9 +2213,6 @@
 
         </div>
 
-
-
-        <!-- KADIYAM -->
 
         <div class="client-card">
 
@@ -2281,9 +2233,6 @@
         </div>
 
 
-
-        <!-- COROMANDEL -->
-
         <div class="client-card">
 
           <img
@@ -2302,9 +2251,6 @@
 
         </div>
 
-
-
-        <!-- CPL -->
 
         <div class="client-card">
 
@@ -2333,9 +2279,7 @@
 
 
 
-  <!-- =========================================================
-       PROCESS
-  ========================================================= -->
+  <!-- PROCESS -->
 
   <section class="process" id="process">
 
@@ -2385,7 +2329,6 @@
         </div>
 
 
-
         <div class="process-step">
 
           <div class="process-number">
@@ -2404,7 +2347,6 @@
         </div>
 
 
-
         <div class="process-step">
 
           <div class="process-number">
@@ -2421,7 +2363,6 @@
           </p>
 
         </div>
-
 
 
         <div class="process-step">
@@ -2450,9 +2391,7 @@
 
 
 
-  <!-- =========================================================
-       CONTACT
-  ========================================================= -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -2503,6 +2442,81 @@
           <div class="contact-details">
 
 
+            <!-- MOBILE PHONE -->
+
+            <div class="contact-detail">
+
+              <div class="contact-detail-icon">
+                📱
+              </div>
+
+              <div>
+
+                <strong>
+                  PHONE
+                </strong>
+
+                <a href="tel:+919393999635">
+                  +91 93939 99635
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-detail">
+
+              <div class="contact-detail-icon">
+                💬
+              </div>
+
+              <div>
+
+                <strong>
+                  WHATSAPP
+                </strong>
+
+                <a
+                  href="https://wa.me/919393999635"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  +91 93939 99635
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- LANDLINE -->
+
+            <div class="contact-detail">
+
+              <div class="contact-detail-icon">
+                ☎
+              </div>
+
+              <div>
+
+                <strong>
+                  LANDLINE
+                </strong>
+
+                <a href="tel:08834051478">
+                  0883-4051478
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
             <div class="contact-detail">
 
               <div class="contact-detail-icon">
@@ -2520,28 +2534,6 @@
                   Rajahmundry, Andhra Pradesh<br>
                   PIN – 533103
                 </span>
-
-              </div>
-
-            </div>
-
-
-
-            <div class="contact-detail">
-
-              <div class="contact-detail-icon">
-                ☎
-              </div>
-
-              <div>
-
-                <strong>
-                  LANDLINE
-                </strong>
-
-                <a href="tel:08834051478">
-                  0883-4051478
-                </a>
 
               </div>
 
@@ -2645,14 +2637,28 @@
           </div>
 
 
-          <div class="contact-button">
+          <!-- CONTACT BUTTONS -->
+
+          <div class="contact-buttons">
+
 
             <a
-              href="tel:08834051478"
+              href="tel:+919393999635"
               class="button button-primary"
             >
-              ☎ Call 0883-4051478
+              📱 Call +91 93939 99635
             </a>
+
+
+            <a
+              href="https://wa.me/919393999635"
+              target="_blank"
+              rel="noopener"
+              class="button whatsapp-button"
+            >
+              💬 WhatsApp Us
+            </a>
+
 
           </div>
 
@@ -2667,9 +2673,7 @@
 
 
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
+  <!-- FOOTER -->
 
   <footer class="footer">
 
